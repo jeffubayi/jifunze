@@ -1,0 +1,491 @@
+
+:root {
+  --dark-navy: #1F354B;
+  --navy: #294461;
+  --green: #11C684;
+  --purple: #6B74E0;
+  --pink: #F878B5;
+  --blue: #0671D5;
+  --yellow: #F7BF31;
+  --light-blue: #6CDFEF;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 375px;
+}
+
+body {
+  background-color: var(--dark-navy);
+  color: white;
+  margin: 1em;
+  height: 100vh;
+  background-image: url("../public/images/blob.svg");
+  background-position: -180px 150px;
+  background-repeat: no-repeat;
+  background-size: auto 500px;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+header {
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.title {
+  color: var(--yellow);
+  margin: 0;
+  
+}
+
+.title-span {
+  color: white;
+  font-weight: 400;
+}
+
+.title-image {
+  width: 42px;
+  height: 42px;
+  margin: 0;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  font-size: 1.25rem;
+}
+
+.home-section {
+  margin-top: 2em;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:2rem;
+  justify-content: center;
+
+}
+
+.phase-two, .phase-three, .phase-five, .quiz-button, .game-button  {
+    border-radius: 16px;
+    width: 200px;
+    height: 130px;
+    padding: 1em;
+    display: flex;
+    transition: all .2s ease-in-out;
+}
+
+
+.phase-two:hover, .phase-three:hover, .phase-five:hover, .quiz-button:hover  {
+  transform: scale(1.1);
+}
+
+.phase-two {
+    background-color: var(--purple);
+}
+
+.phase-three {
+  background-color: var(--green);
+}
+
+.phase-five {
+  background-color: var(--blue);
+}
+
+.quiz-button {
+  background-color: var(--pink);
+}
+
+.dove, .feather, .butterfly {
+  font-size: 3.5rem;
+  margin-top: auto;
+}
+
+.greeting {
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 1.25rem;
+}
+
+/* ============== PHASE TWO ============= */
+
+.sound-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  gap: 0.75em;
+  width: 250px;
+  padding-bottom: 2em;
+}
+
+
+.sound {
+  background-color: var(--pink);
+  border-radius: 16px;
+  width: 28%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding:  6px;
+  cursor: pointer;
+}
+
+.sound p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+
+.sound-icon {
+  width: 30px; 
+  padding: 6px 0;
+}
+
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 4em;
+}
+
+/* ============== GAMES ============= */
+
+.games-button {
+  border-radius: 16px;
+  width: 200px;
+  height: 85px;
+  margin: 2em auto;
+  padding: 1em;
+  text-align: left;
+  background-color: var(--purple);
+  transition: all .2s ease-in-out;
+}
+
+.games-button h2 {
+  font-size: 1.25rem;
+}
+
+.games-button:hover {
+transform: scale(1.1);
+}
+
+.two {
+  background-color: var(--light-blue);
+  color: black;
+}
+
+.three {
+  background-color: var(--pink);
+  color: black;
+}
+
+.four {
+  background-color: var(--green);
+}
+.five {
+  background-color: var(--blue);
+}
+
+/* ============== PHASE TWO QUIZ ============= */
+
+.quiz-image-container {
+  width: 200px;
+  height: 200px;
+  background-color: var(--blue);
+  border-radius: 16px;
+}
+
+.quiz-image {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto 1em;
+  gap: 0.75em;
+  width: 200px;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  gap: 0.75em;
+  width: 200px;
+}
+
+.next-btn {
+  background-color: white;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all .2s ease-in-out;
+}
+
+.next-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.well-done {
+ text-align: center;
+ margin-top: 2em;
+ font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.well-done-icon {
+  font-size: 8rem;
+}
+
+.animate-beat {
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+.quiz-tip {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 1em;
+}
+
+/* ============== MATCHING GAME ============= */
+
+.cards {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1em;
+  width: 200px;
+  margin-top: 2em;  
+}
+
+.sound-card {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sound-card.flipped .inner {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+}
+
+.sound-card .front,
+.sound-card .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.sound-card .front {
+  background: var(--light-blue);
+  transform: rotateY(180deg);
+}
+.sound-card .front p {
+  color: black;
+}
+.sound-card .back {
+  background: var(--pink);
+  font-size: 100px;
+  transition: 0.1s ease all;
+}
+
+.sound-icon {
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.finished-game {
+  margin-top: 1em;
+}
+
+.new-game-btn, .back-to-games-btn {
+  display: block;
+  margin: 1em auto 0;
+  background-color: var(--pink);
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all .2s ease-in-out;
+}
+
+.new-game-btn:hover, .back-to-games-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.back-to-games-btn {
+  color: black;
+  background-color: var(--light-blue);
+  padding: 0.75em 1.25em;
+  margin-top: 0;
+  text-align: center;
+  width: 160px;
+  font-size: 1rem;
+}
+
+.matching-game-games-btn {
+  margin-top: 1em;
+  background-color: var(--green);
+}
+
+.hexagon {
+    height: 60px;
+    width: 60px;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    text-align: center;
+    background: var(--yellow);
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .hexagon::before {
+    display: inline-block;
+    height: 100%;
+    background: var(--yellow);
+    vertical-align: middle;
+    content: '';
+  }
+
+  /* ================= SPELLING GAME ================ */
+
+  .spelling-sounds {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em auto 1em;
+  gap: 0.75em;
+  width: 200px;
+  }
+
+  /* =================== READING GAME =================== */
+
+  .reading-game-word {
+    width: 100%;
+    padding: 0.5em;
+    background-color: var(--blue);
+    border-radius: 16px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .reading-card {
+    width: 57px;
+    height: 57px;
+    background-color: var(--light-blue);
+  }
+  .reading-images {
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    .home-section {
+      grid-template-columns: 1fr;
+      gap:1rem;
+      justify-content: space-between;
+    }
+  }
